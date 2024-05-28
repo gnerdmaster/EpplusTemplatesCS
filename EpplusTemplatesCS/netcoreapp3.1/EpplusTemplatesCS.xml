@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EpplusTemplatesCS</name>
+    </assembly>
+    <members>
+        <member name="T:EpplusTemplatesCS.CellPosition">
+            <summary>
+            Clase para gestionar las posiciones de celda de algún objecto CellPosition
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.CellPosition.ColumnInit">
+            <summary>
+            Columna de inicio
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.CellPosition.RowInit">
+            <summary>
+            Fila de inicio
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.CellPosition.ColumnFinish">
+            <summary>
+            Columna final
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.CellPosition.RowFinish">
+            <summary>
+            Fila final
+            </summary>
+        </member>
+        <member name="M:EpplusTemplatesCS.Cells.L(System.Int32)">
+            <summary>
+             Convierte número (posición de columna) a Letra
+            </summary>
+            <param name="columnNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EpplusTemplatesCS.Cells.N(System.String)">
+            <summary>
+            Convierte letra (posición de columna) a Número
+            </summary>
+            <param name="columnLetter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EpplusTemplatesCS.Dictionaries.GetColor(System.String)">
+            <summary>
+            Obtiene un objecto Color a partir de su nombre
+            <br/>Nomenclatura aceptada (Ej.):
+            <br/><c>yellow | yellow-green | Yellow | YellowGreen</c>
+            </summary>
+            <param name="color_name">Nombre del color</param>
+            <returns>Color</returns>
+        </member>
+        <member name="M:EpplusTemplatesCS.Dictionaries.GetBorderStyle(System.String)">
+            <summary>
+            Obtiene un objeto ExcelBorderStyle (Estilo de Borde) a partir de su nombre
+            <br/>Nomenclatura aceptada (Ej.):
+            <br/><c>center | center-continuous | Center | CenterContinuous</c>
+            </summary>
+            <param name="border_style_name">Nombre del estilo de borde</param>
+            <returns>ExcelBorderStyle</returns>
+        </member>
+        <member name="M:EpplusTemplatesCS.Dictionaries.GetTextAlign(System.String)">
+            <summary>
+            Obtiene un objecto ExcelHorizontalAlignment (Alineación de texto de manera horizontal) a partir de su nombre
+            </summary>
+            <param name="text_align_name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EpplusTemplatesCS.StyleConfig">
+            <summary>
+            Clase StyleConfig, tiene las propiedades necesarias para establecer los estilos y las configuraciones de la celda a imprimir.
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.StyleConfig.background_color">
+            <summary>
+            ✔<c>Background-color</c> es un propiedad que define el color de fondo de un elemento, puede ser el valor de un color o la palabra clave <c>transparent</c>(<b>white</b> por defecto).
+            <br/><b>Sintaxis</b>
+            <br/><b><c>background-color: color | transparent</c></b>
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.StyleConfig.border">
+            <summary>
+            La propiedad border permite definir en una única regla todos los bordes de los elementos seleccionados. Se puede utilizar border para definir el o los valores siguientes: <c><b>border-width</b>, <b>border-style</b>, <b>border-color</b>.</c>
+            <br/><b>Sintaxis</b>
+            <br/><c>border: [border-width || border-style || border-color] ;</c>
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.StyleConfig.border_top_color">
+            <summary>
+            ✔La propiedad <c>border-color</c> es un atajo para definir el color de los cuatro bordes de un elemento.
+            <br/><b>Sintaxis:</b>
+            <br/><c>[ color || transparent ]{1,4}</c>
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.StyleConfig.font_size">
+            <summary>
+            ✔La propiedad <c>font-size</c> especifica la dimensión de la letra.
+            <br/><b>Sintaxis:</b>
+            <br/><c>font-size: lenght</c>
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.StyleConfig.font_family">
+            <summary>
+            ✔La propiedad <c>font-family</c> define una lista de fuentes o familias de fuentes.
+            <br/><b>Sintaxis:</b>
+            <br/><c>font-family: [family | generic name]</c>
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.StyleConfig.font_style">
+            <summary>
+            ✔La propiedad <c>font-style</c> permite definir el aspecto de una familia tipográfica entre los valores: normal, italic (cursiva)
+            <br/><b>Sintaxis:</b>
+            <br/><c>font-family: [normal | italic]</c>
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.StyleConfig.color">
+            <summary>
+            ✔La propiedad <c>color</c> selecciona el valor de color de primer plano del contenido de elemento de texto y decoraciones de texto.
+            <br/><b>Sintaxis:</b>
+            <br/><c>color: [name | #ffffff | rgb(255,255,255)]</c>
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.StyleConfig.italic">
+            <summary>
+            ✔Fuente Cursiva
+            <br/><b>Sintaxis:</b>
+            <br/><c>italic: [true | false]</c>
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.StyleConfig.bold">
+            <summary>
+            ✔Fuente Negrita
+            <br/><b>Sintaxis:</b>
+            <br/><c>bold: [true | false]</c>
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.StyleConfig.text_align">
+            <summary>
+            ✔La propiedad <c>text-align</c> establece la alineación horizontal del contenido a nivel de línea dentro de un elemento de bloque o caja de celda-tabla. Esto significa que funciona como vertical-align pero en dirección horizontal.<br/>
+            <b>Sintaxis</b>
+            <br/><c>text-align: [start | left | center | end | right | justify | fill | distributed | general];</c>
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.StyleConfig.text_wrap">
+            <summary>
+            ✔La propiedad <c>text-wrap</c> controla cómo se ajusta el texto dentro de un elemento.
+            <br/><b>Sintaxis</b>
+            <br/><c>text-wrap: [wrap | true | nowrap | false];</c>
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.StyleConfig.vertical_align">
+            <summary>
+            ✔La propiedad <c>vertical-align</c> especifica el alineado vertical de un elemento en línea o una celda de una tabla.
+            <br/><b>Sintaxis</b>
+            <br/><c>text-align: [top | middle | center | bottom | justify | fill | distributed];</c>
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.StyleConfig.number_format">
+            <summary>
+            ✔Number-format es una propiedad que establece el formato de la celda.
+            <br/>Se pueden utilizar los formatos de números integrados o several build (<b>int</b>, <a href="https://github.com/EPPlusSoftware/EPPlus/wiki/Formatting-and-styling">Ver Info</a>), o un formato personalizado (<b>string</b>, Ej. <c>$###,###,##0.00</c>)
+            </summary>
+        </member>
+        <member name="P:EpplusTemplatesCS.StyleConfig.merge">
+            <summary>
+            ✔La propiedad <c>merge</c> combina el rango de celdas definidas.
+            <br/>
+            <br/><c><b>true</b></c> = Convinar la celda en el rango establecido
+            <br/><c><b>false</b></c> = (default) No convinar la celda en el rango establecido (este repetirá el valor en cada celda del rango establecido)
+            </summary>
+        </member>
+        <member name="T:EpplusTemplatesCS.ToolKits">
+            <summary>
+            EpplusTemplatesCS - Clase Caja de Herramientas
+            </summary>
+        </member>
+        <member name="M:EpplusTemplatesCS.ToolKits._KeyReplace(System.String,System.String[])">
+            <summary>
+            Remplaza texto de la cadena por posiciones iniciando por el #0. 
+            <br/>Ej. 
+            <br/>string cadena = "#0 es un #1 de #2";
+            <br/>string nueva_cadena = cadena._KeyReplace("esto", "ejemplo", "reemplazo", ...);
+            <br/>//nueva cadena => "esto es un ejemplo de reemplazo"
+            </summary>
+            <param name="key">Template</param>
+            <param name="replacements">Reemplazos</param>
+            <returns></returns>
+        </member>
+        <member name="M:EpplusTemplatesCS.ToolKits.Enlarge(EpplusTemplatesCS.CellPosition,EpplusTemplatesCS.CellPosition)">
+            <summary>
+            Retorna un nuevo elemento CellPosition con las posiciones máximas entre dos elementos CellPosition
+            </summary>
+            <param name="pos_target">Posición destino</param>
+            <param name="pos_source">Posición de origen</param>
+            <returns>new CellPosition()</returns>
+        </member>
+        <member name="M:EpplusTemplatesCS.ToolKits._GetValue``2(System.Collections.Generic.IDictionary{``0,``1},``0)">
+            <summary>
+            Obtiene el valor con un key sin tener qué verificar si existe o no.
+            <br/>Si no hay valor, entonces manda el valor predeterminado del diccionario.
+            </summary>
+            <typeparam name="K">Key</typeparam>
+            <typeparam name="V">Value</typeparam>
+            <param name="dictionary">Diccionario</param>
+            <param name="key">Key de entrada</param>
+            <returns></returns>
+        </member>
+        <member name="M:EpplusTemplatesCS.ToolKits._GetValue``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)">
+            <summary>
+            Obtiene el valor con un key sin tener qué verificar si existe o no.
+            <br/>Si no hay valor, entonces manda el valor predeterminado del diccionario.
+            </summary>
+            <typeparam name="K">Key</typeparam>
+            <typeparam name="V">Value</typeparam>
+            <param name="dictionary">Diccionario</param>
+            <param name="key">Key de entrada</param>
+            <param name="_default">Valor por defecto</param>
+            <returns></returns>
+        </member>
+        <member name="M:EpplusTemplatesCS.ToolKits.Colors.StringARGBToColor(System.String)">
+            <summary>
+            Obtiene los 3 o 4 valores ARGB.
+            </summary>
+            <param name="argb"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EpplusTemplatesCS.ToolKits.Colors.ConvertToColor(System.String)">
+            <summary>
+            Devuelve un objeto Color a partir del color ingresado, ya sea por hexadecimal, (a)rgb o nombre. Ej.
+            <br/> <c>yellow | #ffffff | rgb(255,255,255) | argb(255,255,255)</c>
+            </summary>
+            <param name="color">Hexadecimal <b>#ffffff</b> | (A)RGB <b>rgb(255,255,255)</b> | Nombre <b>yellow</b></param>
+            <returns>System.Drawing.Color</returns>
+        </member>
+        <member name="M:EpplusTemplatesCS.ToolKits.General.L(System.Int32)">
+            <summary>
+            Convierte número (posición de columna) a letra
+            </summary>
+            <param name="column_number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EpplusTemplatesCS.ToolKits.General.N(System.String)">
+            <summary>
+            Convierte letra (columna) a entero (posición de columna)
+            </summary>
+            <param name="column_letter"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
